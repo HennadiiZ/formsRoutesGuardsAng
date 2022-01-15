@@ -1,0 +1,112 @@
+
+
+
+<div class="container">
+    <form action="" class="sign-up form" [formGroup]='form' (ngSubmit)="submit()">
+        <h1>Sign-up form:</h1>
+
+        <div class=" form-item">
+            <label>First Name*</label>
+            <input type="text" placeholder="First Name" formControlName="firstName">
+            <div class="validation"
+            *ngIf="form.get('firstName')!.invalid && form.get('firstName')!.touched"
+            >
+                <small 
+                *ngIf="form.get('firstName')!.errors!['required']"
+                >This field is required and cannot be empty</small>
+    
+                <small 
+                *ngIf="form.get('firstName')!.errors!['minlength']">
+                This field must contain at least  {{form.get('firstName')!.errors!['minlength']!.requiredLength}} characters, now it contains {{form.get('firstName')!.errors!['minlength']!.actualLength}}...
+                </small>
+
+                <small 
+                *ngIf="form.get('firstName')!.errors!['maxlength']">
+                This field must not exceed   {{form.get('firstName')!.errors!['maxlength']!.requiredLength}} characters, now it contains {{form.get('firstName')!.errors!['maxlength']!.actualLength}}...
+                </small>
+            </div>
+        </div>
+
+        <div class=" form-item">
+            <label>Last Name*</label>
+            <input type="text" placeholder="Last Name" formControlName="lastName">
+            <div class="validation"
+            *ngIf="form.get('lastName')!.invalid && form.get('lastName')!.touched"
+            >
+                <small 
+                *ngIf="form.get('lastName')!.errors!['required']"
+                >This field is required and cannot be empty</small>
+    
+                <small 
+                *ngIf="form.get('lastName')!.errors!['minlength']">
+                This field must contain at least  {{form.get('lastName')!.errors!['minlength']!.requiredLength}} characters, now it contains {{form.get('lastName')!.errors!['minlength']!.actualLength}}...
+                </small>
+
+                <small 
+                *ngIf="form.get('lastName')!.errors!['maxlength']">
+                This field must not exceed   {{form.get('lastName')!.errors!['maxlength']!.requiredLength}} characters, now it contains {{form.get('lastName')!.errors!['maxlength']!.actualLength}}...
+                </small>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label>Email*</label>
+            <input type="text" placeholder="Email" formControlName="email">
+            <div  
+            *ngIf="form.get('email')!.invalid && form.get('email')!.touched"
+            class="validation">
+                    <small *ngIf="form.get('email')!.errors!['required']"
+                    >This field is required and cannot be empty</small>
+    
+                    <small *ngIf="form.get('email')!.errors!['email']"
+                    >this email address is incorrect</small>
+
+                    <small 
+                    *ngIf="form.get('email')!.errors!['maxlength']">
+                    This field must not exceed   {{form.get('email')!.errors!['maxlength']!.requiredLength}} characters, now it contains {{form.get('email')!.errors!['maxlength']!.actualLength}}...
+                    </small>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label>Password*</label>
+            <input type="password" placeholder="Password" formControlName="password">
+            <div 
+            *ngIf="form.get('password')!.invalid && form.get('password')!.touched"
+            class="validation">
+                    <small *ngIf="form.get('password')!.errors!['required']"
+                    >This field is required and cannot be empty</small>
+        
+                    <small *ngIf="form.get('password')!.errors!['minlength']"
+                    >This field must contain at least  {{form.get('password')!.errors!['minlength']!.requiredLength}} characters, now it contains {{form.get('password')!.errors!['minlength']!.actualLength}}...
+                    </small>
+
+                    <small 
+                    *ngIf="form.get('password')!.errors!['maxlength']">
+                    This field must not exceed   {{form.get('password')!.errors!['maxlength']!.requiredLength}} characters, now it contains {{form.get('password')!.errors!['maxlength']!.actualLength}}...
+                    </small>
+            </div>
+        </div>
+
+        <div class="form-item ">
+            <label>Confirm password*</label>
+            <input type="password" placeholder="Confirm password" formControlName="confirmPassword">
+            <div 
+            *ngIf="form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched"
+            class="validation">
+            <small *ngIf="form.get('confirmPassword')!.errors!['required']"
+            >This field is required and cannot be empty</small>
+
+            <small *ngIf="form.get('confirmPassword')!.errors!['MustMatch']"
+            >Confirm password must match</small>
+            </div>
+        </div>
+
+        <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+
+    </form>
+        <p> 
+            Already have an account? 
+            <span  class="registration-block__item" (click)="goToLogInPage()"> Log in</span>
+        </p>
+</div>

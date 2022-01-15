@@ -1,0 +1,34 @@
+
+<div class="container">
+    <form action="" class="sign-up form" [formGroup]='forgotPassForm' (ngSubmit)="submit()">
+        <div class="registration-block">
+            <!-- <h2>Forgot Password?</h2> -->
+            <!-- <button type="button" routerLinkActive="active" class="registration-block__item" (click)="goToLogInPage()"><h2>Log in:</h2></button> -->
+            <button type="button" class="registration-block__item"><h2>Forgot Password?</h2></button>
+        </div>
+
+
+        <div class="form-item">
+            <label>Your email*</label>
+            <input type="text" placeholder="Email" formControlName="email">
+            <div  
+            *ngIf="forgotPassForm.get('email')!.invalid && forgotPassForm.get('email')!.touched"
+            class="validation">
+              <small *ngIf="forgotPassForm.get('email')!.errors!['required']"
+              >This field is required and cannot be empty</small>
+
+              <small *ngIf="forgotPassForm.get('email')!.errors!['email']"
+              >this email address is incorrect</small>
+            </div>
+        </div>
+        
+
+        <button class="btn" type="submit" [disabled]="forgotPassForm.invalid">Reset Password</button>
+
+    </form>
+
+    <p> 
+        Go to <span (click)="goToLogInPage()"> Log in</span> page
+    </p>
+        
+</div>

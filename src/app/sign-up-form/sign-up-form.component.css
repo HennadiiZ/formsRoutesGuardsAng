@@ -1,0 +1,105 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .form{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgb(164, 179, 164);
+  }
+
+
+  .btn {
+    display: inline-block;
+    background: #333333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .btn:disabled {
+    background: #ccc;
+    color: #000;
+    cursor: not-allowed;
+  } 
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .form-item {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-item label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .form-item input {
+    margin-bottom: 0;
+  }
+
+  .validation{
+    height: 10px;
+  }
+
+  .form-item .validation {
+    color: red;
+  }
+  
+
+  input,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+  }
+  
+
+  
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+
+  input.ng-valid.ng-touched{
+    border: 1px solid green;
+  }
+
+
+p span{
+      cursor: pointer;
+      color: rgb(102, 102, 231);
+      margin: 10px;
+      line-height: 40px;
+}
+p span:hover{
+     text-decoration: underline;
+}

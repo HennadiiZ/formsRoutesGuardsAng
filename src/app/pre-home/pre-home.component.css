@@ -1,0 +1,125 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .registration-block{
+    display: flex;
+    justify-content: space-between;
+  }
+  .registration-block__item{
+    color: #000;
+    cursor: pointer;
+    background-color: rgb(146, 145, 145);
+    padding: 5px 10px;
+    border: 2px solid rgb(146, 145, 145);
+  }
+  .registration-block__item:hover{
+    border: 2px solid #000;
+  }
+
+  .registration-block__item.active{
+    background-color: rgb(250, 249, 249);
+  }
+
+
+
+
+
+
+  body {
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .form{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgb(164, 179, 164);
+  }
+
+
+  .btn {
+    display: inline-block;
+    background: #333333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .btn:disabled {
+    background: #ccc;
+    color: #000;
+    cursor: not-allowed;
+  } 
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .form-item {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-item label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .form-item input {
+    margin-bottom: 0;
+  }
+
+  .validation{
+    height: 10px;
+  }
+
+  .form-item .validation {
+    color: red;
+  }
+  
+
+  input,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+  }
+  
+
+  
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+
+  input.ng-valid.ng-touched{
+    border: 1px solid green;
+  }
+
+  p{
+    text-align: center;
+  }
